@@ -8,7 +8,7 @@ class secfun {
   
   public function jencode($data) {
     $result = json_encode($data);
-    //$result = $this->encrypt($result, PASSPHRASE);
+    $result = $this->encrypt($result, PASSPHRASE);
     $result = base64_encode($result);
     return $result;
   }

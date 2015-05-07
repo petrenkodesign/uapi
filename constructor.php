@@ -6,7 +6,6 @@
 //-----------------------------
 define('ERCODE', 'error 800');
 class get_api {
-    //do=select,update,insert&src=table&value={id:1}&data=[{id:1,name:User,pass:password}]
     public function get_api() {
       $do = $this->ch_post_key('do');
       $this->apido($do);
@@ -91,7 +90,7 @@ class get_api {
 			foreach($value as $key=>$val) {
 			  if($val === reset($value))	$where = 'WHERE ';
 				else $where = $where.' and ';
-				//if($mode === 'search') $val = '%'.$val.'%'; // 
+				//if($mode === 'search') $val = '%'.$val.'%'; // uncomment if you need multi-search
 				$where = $where.$key.' LIKE \''.$val.'\'';
 			}
 		  return isset($where) ? $where : false;
