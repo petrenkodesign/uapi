@@ -1,4 +1,9 @@
 <?php
+//---Universal API ------------
+//---created by Alex Petrenko
+//---http://petrenkodesign.com
+//---petrenkodesign@gmail.com
+//-----------------------------
 class dbfun {
     protected $mysqli='';
     
