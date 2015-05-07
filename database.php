@@ -27,11 +27,14 @@ class dbfun {
         exit;
       }
       //If SELECT get data
-      $result = $result->fetch_assoc();
-      //Close mysqli session
-      $this->mysqli->close();
+      if(is_object($result)) $result = $result->fetch_assoc();
       //Return result
       return $result;
+    }
+    
+    public function close() {
+      //Close mysqli session
+      $this->mysqli->close();
     }
 }
 ?>
