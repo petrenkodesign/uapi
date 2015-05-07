@@ -1,4 +1,9 @@
 <?php
+//---Universal API ------------
+//---created by Alex Petrenko
+//---http://petrenkodesign.com
+//---petrenkodesign@gmail.com
+//-----------------------------
 class get_api {
     protected $ercode='error 800';
     //do=select,update,insert&src=table&value={id:1}&data=[{id:1,name:User,pass:password}]
