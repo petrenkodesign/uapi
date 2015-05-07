@@ -8,15 +8,15 @@ class secfun {
   
   public function jencode($data) {
     $result = json_encode($data);
-    $result = encrypt($result, PASSPHRASE);
+    //$result = $this->encrypt($result, PASSPHRASE);
     $result = base64_encode($result);
-    return result;
+    return $result;
   }
   public function jdecode($data) {
     $result = base64_encode($data);
-    $result = encrypt($result, PASSPHRASE);
+    $result = $this->decrypt($result, PASSPHRASE);
     $result = json_decode($result);
-    return result;
+    return $result;
   }
   
   protected function encrypt($string, $key) {
