@@ -5,6 +5,7 @@
 //---petrenkodesign@gmail.com
 //-----------------------------
 define('ERCODE', 'error 800');
+define('OKCODE', 'ok');
 class get_api {
     public function get_api() {
       $do = $this->ch_post_key('do');
@@ -32,7 +33,7 @@ class get_api {
 				  }
 				  $result = $dbfun->query($sql);
 				  $dbfun->close();
-				  return $result ? $this->_error('ok') : $this->_error();
+				  return $result ? $this->_error(OKCODE) : $this->_error();
 				break;
 				case 'insert':
 				  $data = $this->get_data();
@@ -52,7 +53,7 @@ class get_api {
 				  $sql = "DELETE FROM $src $where";
 				  $result = $dbfun->query($sql);
 				  $dbfun->close();
-				  return $result ? $this->_error('ok') : $this->_error();
+				  return $result ? $this->_error(OKCODE) : $this->_error();
 				break;
 			}
     }
